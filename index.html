@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content="A calm, full-screen weather and local news display for Mississauga." />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home Weather</title>
+  </head>
+  <body>
+    <main class="dashboard">
+      <section class="weather-panel" aria-label="Mississauga weather">
+        <header class="topbar">
+          <p class="eyebrow"><span class="pulse"></span> LIVE CONDITIONS</p>
+          <time id="clock" aria-label="Current time">--:--</time>
+        </header>
+
+        <div class="current-weather">
+          <div class="location-block">
+            <p id="location" class="location">Mississauga, ON</p>
+            <p id="updated" class="updated">Loading weather…</p>
+          </div>
+          <div class="condition-block">
+            <span id="weather-icon" class="weather-icon" aria-hidden="true">☀</span>
+            <p id="condition" class="condition">—</p>
+          </div>
+          <div class="temperature"><span id="temperature">--</span><sup>°</sup></div>
+          <p id="feels-like" class="feels-like">Feels like —°</p>
+        </div>
+
+        <div class="metrics" aria-label="Current weather details">
+          <div><span>HIGH / LOW</span><strong id="high-low">—° / —°</strong></div>
+          <div><span>PRECIPITATION</span><strong id="precipitation">—%</strong></div>
+          <div><span>WIND</span><strong id="wind">—</strong></div>
+          <div><span>HUMIDITY</span><strong id="humidity">—%</strong></div>
+        </div>
+
+        <section class="forecast-section" aria-labelledby="forecast-heading">
+          <div class="section-heading"><h1 id="forecast-heading">Next hours</h1><span id="forecast-note">Updated every 15 min</span></div>
+          <div id="hourly" class="hourly" aria-live="polite"></div>
+        </section>
+
+        <footer class="weather-footer">
+          <span id="sun-times">Sunrise — · Sunset —</span>
+          <span>Data: Open-Meteo</span>
+        </footer>
+      </section>
+
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+
