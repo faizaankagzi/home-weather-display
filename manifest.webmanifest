@@ -1,0 +1,11 @@
+{
+  "name": "Home Weather Display",
+  "short_name": "Weather Display",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "orientation": "landscape",
+  "description": "A landscape weather and local news display for Mississauga."
+}
+
