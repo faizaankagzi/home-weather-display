@@ -55,3 +55,6 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 document.addEventListener("click", requestWakeLock, { once: true });
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
 
+
+function showLoveMessage(){const message=$("#love-message");message.classList.add("is-visible");message.setAttribute("aria-hidden","false");setTimeout(()=>{message.classList.remove("is-visible");message.setAttribute("aria-hidden","true")},10000)}
+setInterval(showLoveMessage,120000);
